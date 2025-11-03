@@ -1,63 +1,23 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiénes Somos - Taller Mecánico</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <!-- ...existing navbar (similar a login.html) ... -->
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="login.html">Taller Mecánico</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link" href="login.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ubicacion_contacto.html">Ubicación y Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="presupuesto.html">Presupuesto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="administracion.html">Administración</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+{% extends 'base.html' %}
 
-    <div class="container mt-5 pt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <h1 class="mt-4">Quiénes Somos</h1>
-                <p>Somos un taller mecánico dedicado a ofrecer servicios de mantenimiento y reparación de vehículos con
-                profesionalismo y garantía. Nuestro equipo cuenta con técnicos calificados y experiencia en múltiples marcas.</p>
-                <ul>
-                    <li>Experiencia y confianza</li>
-                    <li>Repuestos originales y calidad</li>
-                    <li>Asesoría personalizada</li>
-                </ul>
-            </div>
+{% block title %}Quiénes Somos - Taller Mecánico{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Quiénes Somos</h2>
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <p>Somos un taller mecánico con más de 20 años de experiencia...</p>
+            <p>Nuestro equipo está formado por profesionales altamente capacitados...</p>
+        </div>
+        <div class="col-md-4">
+            <h4>Valores</h4>
+            <ul>
+                <li>Profesionalismo</li>
+                <li>Honestidad</li>
+                <li>Calidad</li>
+            </ul>
         </div>
     </div>
-
-    <!-- ...existing footer (similar a login.html) ... -->
-    <footer class="footer mt-5 py-4 bg-dark text-white">
-        <div class="container text-center">
-            <p class="mb-1">© 2025 Taller Mecánico. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+</div>
+{% endblock %}

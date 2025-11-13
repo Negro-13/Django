@@ -11,4 +11,12 @@ urlpatterns = [
     path('ubicacion_contacto/', views.ubicacion_contacto, name='ubicacion_contacto'),
     path('register/', views.register, name='register'),
     path('logout/', views.logout_view, name='logout'),
+    path('servicios/', views.servicios, name='servicios'),
+    path('servicios/crear/', views.crear_servicio, name='crear_servicio'),
+    path('ficha-tecnica/', views.ficha_tecnica, name='ficha_tecnica'),
+    path('ficha-tecnica/crear/', views.crear_ficha_tecnica, name='crear_ficha_tecnica'),
+    path('presupuesto/', views.presupuesto, name='presupuesto'),
+    path('presupuesto/crear/', views.crear_presupuesto, name='crear_presupuesto'),
+    path('repuestos/', views.repuestos, name='repuestos'),
+    path('proveedores/', views.proveedores, name='proveedores'),
 ]

@@ -1,0 +1,32 @@
+{% extends 'Taller_mecanico/base.html' %}
+{% block title %}Fichas Técnicas - Taller Mecánico{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Fichas Técnicas</h2>
+    <a href="{% url 'crear_ficha_tecnica' %}" class="btn btn-primary mb-3">Agregar Ficha Técnica</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nro Ficha</th>
+                <th>Cliente</th>
+                <th>Vehículo</th>
+                <th>Subtotal</th>
+                <th>Mano de Obra</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ficha in fichas %}
+            <tr>
+                <td>{{ ficha.nro_ficha }}</td>
+                <td>{{ ficha.cod_cliente }}</td>
+                <td>{{ ficha.vehiculo }}</td>
+                <td>${{ ficha.subtotal }}</td>
+                <td>${{ ficha.mano_obra }}</td>
+                <td>${{ ficha.total_general }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

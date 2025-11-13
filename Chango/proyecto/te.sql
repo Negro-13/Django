@@ -66,8 +66,9 @@ CREATE TABLE IF NOT EXISTS  `Stock`(
 );
 
 CREATE TABLE IF NOT EXISTS `Usuarios` (
-    `Usuario` VARCHAR(50) PRIMARY KEY,
-    `Clave` VARCHAR(50),
-    `Nombre` VARCHAR(50),
-    `Apellido` VARCHAR(50)
+    `Usuario` VARCHAR(50),
+    `Clave` VARCHAR(50)
 );
+
+insert into `Usuarios` (`Usuario`,`Clave`) value 
+('admin', 'admin');
